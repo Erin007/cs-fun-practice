@@ -24,18 +24,17 @@ print_array ([3, 19, 27, 4, 98, 304, -9, 72])
 # the number 4 is stretched into 2, 2, the number 24 is stretched into 12,
 # 12 and the number 11 is stretched into 6, 5.)
 
+#Jessica and Carmen have recursive solutions if you want to check with them
+
 def stretch(array_of_integers)
   stretched_array = []
   array_of_integers.each do |integer|
     if integer %2 == 0
-      addend = integer/2
-      stretched_array << addend
-      stretched_array << addend
+      stretched_array << integer/2
+      stretched_array << integer/2
     else
-      addend1 = integer/2 + 1
-      addend2 = integer/2
-      stretched_array << addend1
-      stretched_array << addend2
+      stretched_array << integer/2 + 1
+      stretched_array << integer/2
     end
   end
   return stretched_array
